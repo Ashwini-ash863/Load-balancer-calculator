@@ -13,26 +13,26 @@ A simple calculator web application across two AWS availability zones using an A
 
 Step 1: Create a VPC
 
-1. Log in to the AWS Management Console.
+ - click on vpc and more with 2 availabilty zones
+ 
+Step 3: Launch 2 EC2 Instances  
 
-2. Navigate to the VPC service.
-  
-3. Create a VPC with CIDR block 10.0.0.0/16.
-  
-4. Name it CalculatorVPC.
-  
-5. Enable DNS hostnames and DNS resolution.
+- in instance 1 add userdata 1
+ 
+- in instance 2 add userdata 2
 
-Step 2: Create Subnets
+Step 4:Create an Application Load Balancer
 
-1. Create two public subnets in different availability zones (e.g., us-east-1a, us-east-1b):
-   
-• Subnet 1: 10.0.1.0/24 in us-east-1a.
+ Create an Application Load Balancer
 
-• Subnet 2: 10.0.2.0/24 in us-east-1b.
+ - Configure it to listen on HTTP (port 80).
 
-3. Associate an Internet Gateway with the VPC.
-  
-4. Update the route table to route 0.0.0.0/0 to the Internet Gateway.
+ - Select both subnets (us-east-1a, us-east-1b).
+ 
+ - Create a target group named CalculatorTG with HTTP health checks on /index.html.
+ 
+ - Register the two EC2 instances in the target group.
 
-Step 3: Launch EC2 Instances   
+Step 5: Test the Application
+ 
+ - Obtain the ALB DNS name from the AWS Console.
