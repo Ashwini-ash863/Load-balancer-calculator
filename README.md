@@ -21,9 +21,9 @@ Step 3: Launch 2 EC2 Instances
  
 - in instance 2 add userdata 2
 
-Step 4:Create an Application Load Balancer
+Step 4:Application Load Balancer
 
- Create an Application Load Balancer
+ - Create an Application Load Balancer
 
  - Configure it to listen on HTTP (port 80).
 
