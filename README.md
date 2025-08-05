@@ -15,13 +15,13 @@ Step 1: Create a VPC
 
  - click on vpc and more with 2 availabilty zones
  
-Step 3: Launch 2 EC2 Instances  
+Step 2: Launch 2 EC2 Instances  
 
 - in instance 1 add userdata 1
  
 - in instance 2 add userdata 2
 
-Step 4:Application Load Balancer
+Step 3:Application Load Balancer
 
  - Create an Application Load Balancer
 
@@ -33,6 +33,6 @@ Step 4:Application Load Balancer
  
  - Register the two EC2 instances in the target group.
 
-Step 5: Test the Application
+Step 4: Test the Application
  
  - Obtain the ALB DNS name from the AWS Console.
